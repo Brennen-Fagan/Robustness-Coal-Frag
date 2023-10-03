@@ -1,0 +1,12 @@
+Data from One Population Python > Viking_CoFr_FragProbs > Data19-07-08 and from Data19-07-07.
+
+Folder renamed from MixedKernel_MM_Total_v0001 to MixedKernel_MMPFragv0001 to match current standard.
+
+Only 10000 and 1000 population copied (r = 0.001/0.999 * 10^4 = 10.01).
+
+Signed 2023-07-07, Fagan.
+
+
+Realised I don't need r = 1.001, so removing the 1000 population from this folder.
+
+Signed 2023-07-11, Fagan.
