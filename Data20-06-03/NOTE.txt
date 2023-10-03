@@ -1,0 +1,7 @@
+Data from One Population Python > Viking_CoFr_FragProbs > Data20-06-03.
+
+Folder renamed from MixedKernel_MM_Total_v00002 to MixedKernel_MMPFragv0002 to match current standard.
+
+Only 300 population copied (r = 0.0002/0.9998 * 3 * 10^2 = 0.060012).
+
+Signed 2023-07-11, Fagan.
