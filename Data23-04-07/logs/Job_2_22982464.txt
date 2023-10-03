@@ -1,0 +1,33 @@
+Opening log file:  /users/btf500/java.log.19012
+
+                            < M A T L A B (R) >
+                  Copyright 1984-2022 The MathWorks, Inc.
+             R2022a Update 4 (9.12.0.2009381) 64-bit (glnxa64)
+                                July 7, 2022
+
+ 
+To get started, type doc.
+For product information, visit www.mathworks.com.
+ 
+{Error using run
+Code-Model/MAT_to_Sparse.m not found.
+} 
+
+============================
+ Job utilisation efficiency
+============================
+
+Job ID: 22982464
+Cluster: viking
+User/Group: btf500/clusterusers
+State: COMPLETED (exit code 0)
+Cores: 1
+CPU Utilized: 00:00:13
+CPU Efficiency: 50.00% of 00:00:26 core-walltime
+Job Wall-clock time: 00:00:26
+Memory Utilized: 972.00 KB
+Memory Efficiency: 0.00% of 25.00 GB
+ Requested wall clock time: 02:00:00
+    Actual wall clock time: 00:00:26
+Wall clock time efficiency: 0.4%
+           Job queued time: 00:00:09
