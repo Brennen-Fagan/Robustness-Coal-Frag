@@ -40,5 +40,23 @@ Files are .RData files, loaded with the base R load function, and whose contents
 10. file: contains the associated filename. Sometimes NA, as in kernel above.
 
 ## Coding and Modelling Folder
+The files in this folder collect the various tools that were necessary to generate the data, analyses, tables, figures, and statistics discussed above and in the main text. We describe them in the rough flow of the pipeline below. We additionally note the usage of a .yaml file to describe our Python environment on the now decommissioned [Viking computing cluster](https://wiki.york.ac.uk/display/RCS/Viking+-+University+of+York+Research+Computing+Cluster).
+
+### Python -- Simulation
+Python code can be divided into code defining the process and code that runs the simulation. To assist in understanding our terminology, we internally referred to our original model as Johnson's model after [Johnson et al. (2016)](http://science.sciencemag.org/content/352/6292/1459), in which coalescence and fragmentation was used to model terrorist support networks. Defining the process, we have
+
+1. JohnsonAggregator.py
+2. JohnsonDisaggregator.py
+3. picker.py
+4. counting.py
+5. ChineseRestaurant.py
+6. JohnsonOnePopModels.py
+
+### MATLAB -- Sparsification
+
+
+### R -- Analysis
+
 
 ### Pipeline
+
