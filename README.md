@@ -7,6 +7,8 @@ Three folder types. Data folders have raw data (created from Python code and the
 ## Data Folders
 Folders are organised roughly by date and theme. Each file is a MATLAB .mat file, with those that have the tag "_S" converted in MATLAB from those without as sparse matrices (see "MAT_to_Sparse" family of MATLAB scripts). Those that do not have the tag "_S" were instead created in Python using SciPy.io's savemat function (see "1_Generate" family of Python scripts). Each row of the matrix represents the population after a time step, with column i representing the number of clusters of size i. By convention, to reduce the amount of data stored, and to reduce autocorrelation (but see plots of summary statistics through time in the text), data was only stored every 10 time steps. As standard computational practice the simulations were burnt in, usually with 1,000,000 events, and were started from random partitions of the population. To facilitate saving and storing the simulation results in Python during batch jobs, we began saving (time) "slices" of the results matrix. These were then "stitched" together when the MATLAB sparsification script was run.
 
+Note that not all data generated was used in the course of preparation of this manuscript.
+
 The other tags used refer to
 
 1. RandomPartition: our standard is to start the simulations from a random partition of the population size.
@@ -52,11 +54,37 @@ Python code can be divided into code defining the process and code that runs the
 5. ChineseRestaurant.py
 6. JohnsonOnePopModels.py
 
-### MATLAB -- Sparsification
+The following files run the simulations:
 
+1. 1_Generate_Populations_2.py
+2. 1_Generate_Populations_3.py
+3. 1_Generate_Populations_4.py
+4. 1_Generate_Populations_5.py
+5. 1_Generate_Populations_ImperfectComparisons.py
+6. 1_Generate_Populations_KernalComparisonPopulations.py
+
+### MATLAB -- Sparsification
+The following files load the .mat results matrices, combine the results into a single matrix per file, and then saves the single matrix as a sparse matrix.
+
+1. MAT_to_Sparse.m
+2. MAT_to_Sparse_NoFlux.m
 
 ### R -- Analysis
+The following files are used to generate the analyses.
 
+1. run_fitting_embarassingly_parallel.R
+2. Summary_CalculateRunLengths.R
+3. Tables.R
+
+The following files are used to generate elements of the text (statistics and figures).
+
+1. Figure_CreateSteadyStateExample.R
+2. Figure_CreateSteadyStateExample2.R
+3. Figure_CreateSteadyStateExample5.R
+4. Figure_CreateSteadyStateExample6.R
+5. Figure_CreateGelShatterExample9.R
+6. Figure_CreateTablePlots.R
+7. Figure_SI_LoadAndAverageTargets.R
 
 ### Pipeline
 
