@@ -63,28 +63,33 @@ The following files run the simulations:
 5. 1_Generate_Populations_ImperfectComparisons.py
 6. 1_Generate_Populations_KernalComparisonPopulations.py
 
+These files all have similar formatting and expect command line arguments indicating which simulations to run and which parameters to set. They then generate directories, start the simulation from a random partition burn-in the simulation, and then run sections of the simulation, writing and then appending to a .mat file using the SciPy.io interface.
+
 ### MATLAB -- Sparsification
 The following files load the .mat results matrices, combine the results into a single matrix per file, and then saves the single matrix as a sparse matrix.
 
 1. MAT_to_Sparse.m
 2. MAT_to_Sparse_NoFlux.m
 
+Both functions serve to convert the .mat files generating in Python into a consistent sparse version of the .mat files, which proved easier to load into R. Differences between the two files reflect a beginnings of an analysis of flux across cluster sizes, and changing directory structure and software syntax.
+
 ### R -- Analysis
 The following files are used to generate the analyses.
 
-1. run_fitting_embarassingly_parallel.R
-2. Summary_CalculateRunLengths.R
-3. Tables.R
+1. run_fitting_embarassingly_parallel.R:
+2. rexpl.R:
+3. Summary_CalculateRunLengths.R:
+4. Tables.R:
 
 The following files are used to generate elements of the text (statistics and figures).
 
-1. Figure_CreateSteadyStateExample.R
-2. Figure_CreateSteadyStateExample2.R
-3. Figure_CreateSteadyStateExample5.R
-4. Figure_CreateSteadyStateExample6.R
-5. Figure_CreateGelShatterExample9.R
-6. Figure_CreateTablePlots.R
-7. Figure_SI_LoadAndAverageTargets.R
+1. Figure_CreateSteadyStateExample.R: Figures ...
+2. Figure_CreateSteadyStateExample2.R: Figures ...
+3. Figure_CreateSteadyStateExample5.R: Figures ...
+4. Figure_CreateSteadyStateExample6.R: Figures ...
+5. Figure_CreateGelShatterExample9.R: Figures ...
+6. Figure_CreateTablePlots.R: Figures ...
+7. Figure_SI_LoadAndAverageTargets.R: 
 
 ### Pipeline
 
