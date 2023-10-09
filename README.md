@@ -76,20 +76,20 @@ Both functions serve to convert the .mat files generating in Python into a consi
 ### R -- Analysis
 The following files are used to generate the analyses.
 
-1. run_fitting_embarassingly_parallel.R:
-2. rexpl.R:
-3. Summary_CalculateRunLengths.R:
-4. Tables.R:
+1. run_fitting_embarassingly_parallel.R: workhorse script for analysing .mat files. As noted above, the exact format of the output has changed over time. The script primarily reads in the sparse .mat file, breaks it into rows, and then applies power-law fitting methods to each row before binding the results together and saving. As the name suggests, this script is formatted to facilitate switching between parallel and serial fitting.
+2. rexpl.R: Derived from run_fitting_embarassingly_parallel, this script constructs partitions using the equation for the steady-state and then fits them with the same power-law fitting methods. Generates figure 3.
+3. Summary_CalculateRunLengths.R: an earlier version of Tables.R, this script takes the sparse .mat, organises them into runs in which the largest cluster is not fragmented, interpolates them slightly, and then converts and summarises the lengths of runs into the cyclicity parameter.
+4. Tables.R: As in 3., but set to provide the cyclicities for both of the tables in the text, rather than base model rows.
 
 The following files are used to generate elements of the text (statistics and figures).
 
-1. Figure_CreateSteadyStateExample.R: Figures ...
-2. Figure_CreateSteadyStateExample2.R: Figures ...
-3. Figure_CreateSteadyStateExample5.R: Figures ...
-4. Figure_CreateSteadyStateExample6.R: Figures ...
-5. Figure_CreateGelShatterExample9.R: Figures ...
-6. Figure_CreateTablePlots.R: Figures ...
-7. Figure_SI_LoadAndAverageTargets.R: 
+1. Figure_CreateSteadyStateExample.R: Generates figures 1 and 2.
+2. Figure_CreateSteadyStateExample2.R: Generates figure 4.
+3. Figure_CreateSteadyStateExample5.R: Generates figure 5.
+4. Figure_CreateSteadyStateExample6.R: Generates figures 6, 7, and 8.
+5. Figure_CreateGelShatterExample9.R: Generates figures 9, 10, 11, and 12.
+6. Figure_CreateTablePlots.R: Generates figure 13.
+7. Figure_SI_LoadAndAverageTargets.R: A supplemental figure generator that lets one inspect PDF and CCDF plots.
 
 ### Pipeline
 
