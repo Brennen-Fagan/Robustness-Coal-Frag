@@ -45,14 +45,14 @@ Files are .RData files, loaded with the base R load function, and whose contents
 The files in this folder collect the various tools that were necessary to generate the data, analyses, tables, figures, and statistics discussed above and in the main text. We describe them in the rough flow of the pipeline below. We additionally note the usage of a .yaml file to describe our Python environment on the now decommissioned [Viking computing cluster](https://wiki.york.ac.uk/display/RCS/Viking+-+University+of+York+Research+Computing+Cluster).
 
 ### Python -- Simulation
-Python code can be divided into code defining the process and code that runs the simulation. To assist in understanding our terminology, we internally referred to our original model as Johnson's model after [Johnson et al. (2016)](http://science.sciencemag.org/content/352/6292/1459), in which coalescence and fragmentation was used to model terrorist support networks. Defining the process, we have
+Python code can be divided into code defining the process and code that runs the simulation. To assist in understanding our terminology, we internally referred to our original model as Johnson's model after [Johnson et al. (2016)](http://science.sciencemag.org/content/352/6292/1459), in which coalescence and fragmentation was used to model terrorist support networks. Defining the process, we have:
 
-1. JohnsonAggregator.py
-2. JohnsonDisaggregator.py
-3. picker.py
-4. counting.py
-5. ChineseRestaurant.py
-6. JohnsonOnePopModels.py
+1. JohnsonAggregator.py: various coalescence functions.
+2. JohnsonDisaggregator.py: various fragmentation functions.
+3. picker.py: functions that characterise the kernels.
+4. counting.py: functions that broadly a) detect numbers and positions of elements, b) partition numbers, c) summarise the population.
+5. ChineseRestaurant.py: functions that implement various attempts at the Chinese Restaurant Process and related processes.
+6. JohnsonOnePopModels.py: various stages of functions that bring together all of the above to implement the full coalescence and fragmentation process. MixedKernelModel is our end result.
 
 The following files run the simulations:
 
