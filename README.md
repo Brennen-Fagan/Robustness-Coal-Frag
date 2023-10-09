@@ -92,4 +92,15 @@ The following files are used to generate elements of the text (statistics and fi
 7. Figure_SI_LoadAndAverageTargets.R: A supplemental figure generator that lets one inspect PDF and CCDF plots.
 
 ### Pipeline
+In principle, the pipeline should be straightforward. 
 
+1. Select the kernels one is interested in, 
+2. Select the coalescence and fragmentation functions one is interested in, 
+3. Write a script to run MixedKernelModel with the desired combination of functions,
+4. Save the results as .mat matrices,
+5. Sparsify the matrices in MATLAB with something like MAT_to_Sparse.m,
+6. Run the fitting and summarising script run_fitting_embarassingly_parallel (with some edits to make sure your specific .mats are identified),
+7. Summarise the cyclicity (e.g. with some edits to Tables.R or Summary_CalculateRunLengths.R),
+8. Plot the results.
+
+Edits should mostly need to be made due to changes in directory structure, but there have been several changes in standards over the lifetime of this project, so no long term guarantee can be provided.
